@@ -1,0 +1,13 @@
+
+
+
+<% if (post.banner){ %>
+	<div class="banner"  style="background-image:url(<%- url_for(post.banner) %>)"></div>
+
+<% } else if (post.photos && post.photos.length){ %>
+	
+	<% for( i in post.photos){%>
+	<div class="gallery" style="background-image:url(<%- url_for(post.photos[i]) %>)"></div>
+	<%}%>  
+<%}%>
+

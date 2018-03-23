@@ -1,0 +1,38 @@
+<div class="post-footer">    
+
+<%- partial('_partial/_post/donate') %> 
+<%- partial('_partial/_post/mob_share') %>
+
+<% if (page.prev || page.next ) { %>
+
+  <nav class="post-nav">
+
+      
+  <% if (page.prev) { %>
+
+  <% var title = truncate(page.prev.title , {length:60}) %> 
+
+      
+    <a href="<%- url_for(page.prev.path) %>">          
+
+     <span class="left" data-hover="<%= title ||  __('Untitled') %>">  <%= __('Post.Prev') %> </span>  
+
+    </a>
+    
+  <% } %>
+    
+  <% if (page.next) { %>
+
+  <% var title = truncate(page.next.title, {length:60}) %>
+
+  <a href="<%- url_for(page.next.path) %>">         
+
+    <span class="right" data-hover="<%= title ||  __('Untitled') %>"><%=__('Post.Next')%> </span>  
+
+  </a>
+
+  <% } %>
+  </nav>  
+<% } %>
+
+</div>

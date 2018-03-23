@@ -1,0 +1,84 @@
+
+//
+// tag 
+//
+
+	
+.meta-name	
+	margin 1em 	
+	letter-spacing 1px
+	font-size 1rem 
+	
+.tag-wrap	
+	@extend $tags  
+	display inline-block		
+	margin .4rem .3rem 	
+	padding  2px 12px	
+.tag-name
+	font-size 0.9rem
+
+.tag-count
+	font-size 0.825rem
+	
+//
+// cate
+// #2a79a7
+.cate-container
+	overflow hidden	
+	& > div		
+		column(4,12)	
+	
+
+.cate-inner
+	padding .8rem
+	margin .5rem 1rem 2rem 1rem
+	border 1px solid $line-clr
+	border-radius 2px
+	overflow hidden	
+
+	&:hover		
+		box-shadow 4px 4px 2px 3px rgba(0,0,0,.05)
+	
+		
+.cate-name	
+	display inline-block 
+	@extend $oneline
+	width 100%
+	margin 1rem 0 .5rem 0	
+	font-size 1.03rem
+	
+.cate-count
+	display block
+	text-align right
+	font-size 0.825rem	
+
+
+//
+// archive
+//
+.archive-item			
+	position relative		
+	padding 1.4rem 0 1.4rem 4rem
+
+
+.archive-year	
+	font-size 1.2rem
+	text-align center
+	margin 2rem 0  
+	color rgba(0,0,0,.4)	
+	
+.archive-time		
+	position  absolute
+	left 6rem
+	top 28px
+	font-size 1rem
+	line-height 1
+	color rgba(0,0,0,.5)
+	
+		    
+.archive-title
+	display inline-block
+	margin-left 12.5rem	
+	& a
+		font-size 1.25rem
+		letter-spacing 1px
