@@ -6,8 +6,8 @@
 title: Qilingu # your blog title name
 subtitle:  
 author: Chengdan Gu # 作者
-language: Zh-cn
-timezone: UTC+8
+language: Zh-CN
+timezone: Asia/Shanghai
 
 # custom Site settings
 # more detail check out docs
@@ -30,7 +30,7 @@ permalink_defaults:
 # SNS settings
 # RSS:
 weibo_username: 莫念道人
-zhihu_username: 
+zhihu_username: 莫念尘
 github_username: qilin1992
 twitter_username: 
 facebook_username:  
