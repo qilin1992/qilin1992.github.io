@@ -1,5 +1,6 @@
 ---
-title: categories
-date: 2018-03-23 18:36:20
-type: "categories"
+title: 文章分组
+type: categories
+layout: category
+comments: false
 ---

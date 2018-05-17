@@ -1,5 +1,6 @@
 ---
-title: tags
-date: 2018-05-16 17:00:00
-type: "tags"
+title: 文章标签
+type: tags
+layout: tag
+comments: false
 ---

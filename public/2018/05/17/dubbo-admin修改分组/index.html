@@ -5,7 +5,7 @@
   <meta name="viewport"content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes"/>
   
   
-  <title>  Hello World |   Qilingu </title>
+  <title>  Dubbo-Admin修改分组 |   Qilingu </title>
 
  
   
@@ -81,21 +81,21 @@
 	<div class="post-header slideDownMin center">
 
 	<span class="post-title">	
-		Hello World
+		dubbo-admin修改分组
 	</span>
 
 	
 	<div class="post-info">
 
 		<time class="post-time"><span class="iconfont icon-date"></span>
-		2018/05/16 	
+		2018/05/17 	
 		</time>
 		
 		
 
 	<span class="post-meta">		
 	<span class="iconfont icon-category"></span>
-		<a class="category-link" href="/categories/演示使用/">演示使用</a>
+		<a class="category-link" href="/categories/组件配置/">组件配置</a>
 	</span>		
 	
 
@@ -103,14 +103,14 @@
 				
 	<span class="post-meta">
 	<span class="iconfont icon-tag"></span>
-		<a class="tag-link" href="/tags/Test/">Test</a> <a class="tag-link" href="/tags/演示/">演示</a>
+		<a class="tag-link" href="/tags/dubbo/">dubbo</a>
 	</span>			
 	
 
 
 
 	<span class="post-words"><span class="iconfont icon-words"></span>
-		364
+		613
 	</span>
 		
 	
@@ -124,17 +124,17 @@
 
 		
 
-	  	<!-- Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues). -->
-<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<a id="more"></a>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+	  	<h2 id="Dubbo-admin配置分组信息"><a href="#Dubbo-admin配置分组信息" class="headerlink" title="Dubbo-admin配置分组信息"></a>Dubbo-admin配置分组信息</h2><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
+<p>日常我们使用dubbo-admin作为控制器管理应用和服务，同时可以配置路由，管理查询服务是否正常上线。搭建的过程中我们也会去配置比较多的东西，关于搭建的教程大家可以移步：<a href="https://blog.csdn.net/u013142781/article/details/50396621" target="_blank" rel="external">CSDN:dubbo-admin管理平台搭建</a>，这里主要给大家介绍关于分组的配置   </p>
+</blockquote>
+<a id="more"></a>  
+<h3 id="1-常用的修改"><a href="#1-常用的修改" class="headerlink" title="1.常用的修改"></a>1.常用的修改</h3><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">webapp/WEB-INF/dubbo.properties</div></pre></td></tr></table></figure>
+<p>通常我们会比较习惯在这里面修改zk的地址和对应的账号密码  </p>
+<h3 id="2-分组的修改"><a href="#2-分组的修改" class="headerlink" title="2.分组的修改"></a>2.分组的修改</h3><p>然而我们可能会在注册ZK的时候增加分组的概念来增加ZK的公用性。因此在搭建dubb-admin的时候需要修改对应的分组。对应的配置文件在<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">/META-INF/spring/dubbo-admin.xml</div></pre></td></tr></table></figure></p>
+<p>从这个配置文件我们可以看出来，实际上这个文件就是dubb-admin的dubbo配置文件，这里面找到<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">&lt;dubbo:registry address=&quot;$&#123;dubbo.registry.address&#125;&quot; check=&quot;false&quot; file=&quot;false&quot; /&gt;</div></pre></td></tr></table></figure></p>
+<p>在这里按照正常dubbo分组配置方法增加group配置即可，然后重启dubbo-admin就可以正常看到相应的分组注册上线   </p>
+<blockquote>
+<font color="red"><strong>当然这里也需要注意的一个dubbo-admin正常也只注册一个分组比较容易清晰的管理一个组下的所有服务</strong></font></blockquote>
   	
 
 	  </div>     
@@ -201,18 +201,17 @@ src="http://f1.webshare.mob.com/code/mob-share.js?appkey=21d601593a1de"></script
 
       
   
-
-   
-
-      
-    <a href="/2018/05/17/从杭城到金陵的迁徙/">          
-
-     <span class="left" data-hover="从杭城到金陵的迁徙">  上一篇 </span>  
-
-    </a>
     
   
-    
+
+  
+
+  <a href="/2018/05/17/从杭城到金陵的迁徙/">         
+
+    <span class="right" data-hover="从杭城到金陵的迁徙">下一篇 </span>  
+
+  </a>
+
   
   </nav>  
 
